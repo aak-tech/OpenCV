@@ -1,9 +1,10 @@
 import cv2
 
 img = cv2.imread("gettyimages-1216663592-612x612-1611003151.jpg")
-###cap  = cv2.VideoCapture(0)
+## This os for using Cameras
+###{cap  = cv2.VideoCapture(0)
 #cap.set(3,640)
-#cap.set(4,480)
+#cap.set(4,480)}
 
 classNames = []
 classFile = 'coco.names'
@@ -19,8 +20,8 @@ net.setInputScale(1.0/ 127.5)
 net.setInputMean((127.5, 127.5, 127.5))
 net.setInputSwapRB(True)
 
-
-#success, img = cap.read()
+# For Camer Image
+{#success, img = cap.read()}
 classIds, confs, bbox = net.detect(img, confThreshold=0.5) # Threshold to detect object
 print(classIds,bbox)
 
